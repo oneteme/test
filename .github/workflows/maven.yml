@@ -20,10 +20,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Build with Maven
-      id: identify
+    - id: identify
       run: |
         export usf="${{ github.workspace }}"
       
     - name: Build with Maven
-      run: echo ${{ steps.identify.outputs.usf }}
+      run: |
+        echo ${{ steps.identify.outputs.usf }}
+        echo ${{ steps.identify.outputs }}
