@@ -27,3 +27,4 @@ jobs:
       run: |
         echo ${{ steps.identify.outputs.usf }}
         echo ${{ steps.identify.outputs }}
+        echo ${{ github.event.repository.name }}
