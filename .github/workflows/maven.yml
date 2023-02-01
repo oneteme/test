@@ -23,7 +23,7 @@ jobs:
     - name: Build with Maven
       id: identify
       run: |
-        export usf=${{ github.workspace }}
+        export usf="${{ github.workspace }}"
       
     - name: Build with Maven
       run: echo ${{ steps.identify.outputs.usf }}
