@@ -8,7 +8,8 @@
 name: Print environment variables
 
 on:
-  workflow_dispatch:
+  push:
+    branches: [ "main" ]
 
 jobs:
   debug:
